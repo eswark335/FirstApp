@@ -1,0 +1,26 @@
+.pos{
+    color: #000;
+    width: 100%;
+    height: 100%;
+
+}
+#myholder {
+    position: relative;
+    border: 1px solid gray;
+    display: inline-block;
+    background: transparent;
+    overflow: hidden;
+    
+ }
+#myholder svg {
+    background: transparent;
+ }
+#myholder svg .link {
+    z-index: 2;
+ }
+@media only screen and (max-width: 768px) {
+    
+    [class="myholder"] {
+     width: 100%
+    }
+  }

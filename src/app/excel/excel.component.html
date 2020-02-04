@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/2.1.0/joint.css" />
+  <script src="joint.layout.ForceDirected.js"></script>
+</head>
+
+<body>
+  <div style="width: 100px;
+    height: 100px;position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+      
+    margin: auto; " *ngIf="show1">
+    <input type="file" class="btn btn-success" (change)="onFileChange($event)" />
+    <div id="output"></div>
+    <br>
+    <div *ngIf="willDownload">
+      <a id="download"> Download JSON File </a>
+    </div>
+  </div>
+  <!-- <div align="center" *ngIf="showComponent">
+    <mat-toolbar style="margin-right: 2cm">
+      <span>Component Details</span>
+    </mat-toolbar>
+    <mat-card class="my-card">
+      <mat-card-content>
+        <form class="my-form" [formGroup]="flowchart" *ngFor="let component of components">
+          <mat-form-field class="full-width">
+            <mat-label>Component Name</mat-label>
+            <input matInput placeholder="Component name" formControlName="componentName" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Select Shape" formControlName="componentShape" #ref>
+              <mat-option value="Rectangle">Rectangle</mat-option>
+              <mat-option value="Circle">Circle</mat-option>
+              <mat-option value="Ellipse">Ellipse</mat-option>
+              <mat-option value="Database">Database</mat-option>
+              <mat-option value="amazonS3">amazonS3</mat-option>
+              <mat-option value="DeleteDatabase">DeleteDatabase</mat-option>
+              <mat-option value="Laptop">Laptop</mat-option>
+              <mat-option value="Server">Server</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="full-width"
+            *ngIf="ref.value === 'Circle'||ref.value ==='Rectangle'||ref.value ==='Ellipse'">
+            <mat-label>Component color</mat-label>
+            <input matInput placeholder="Component Color" formControlName="componentColor" required>
+          </mat-form-field>
+          <!-- </form> 
+          <mat-form-field class="full-width">
+            <mat-label>Text</mat-label>
+            <input matInput placeholder="text" formControlName="text" required>
+          </mat-form-field>
+          <mat-form-field class="full-width"
+            *ngIf="ref.value === 'Circle'||ref.value ==='Rectangle'||ref.value ==='Ellipse'">
+            <mat-label>Text Color</mat-label>
+            <input matInput placeholder="Text Color" formControlName="textColor" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Position X</mat-label>
+            <input matInput placeholder="Postion x" formControlName="position_x" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Position Y</mat-label>
+            <input matInput placeholder="Position Y" formControlName="position_y" required>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="Add()" color="primary">Add Another Component</button>
+        <button mat-raised-button (click)="submitComponent()" color="primary">Submit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div *ngIf="showLink">
+    <div align="center">
+      <mat-toolbar style="margin-right: 2cm">
+        <span>Link Details</span>
+      </mat-toolbar>
+      <mat-card class="my-card">
+        <mat-card-content>
+          <form class="my-form" [formGroup]="linkData" *ngFor="let link of links">
+            <mat-form-field class="full-width">
+
+              <mat-select placeholder="Source Component" formControlName="sourceComponent">
+                <mat-option value={{component.componentName}} *ngFor="let component of components1">
+                  {{component.componentName}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Target Component" formControlName="targetComponent">
+                <mat-option value={{component.componentName}} *ngFor="let component of components1">
+                  {{component.componentName}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Link Data</mat-label>
+              <input matInput placeholder="Link Data" formControlName="linkData" required>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="AddLink()" color="primary">Add Another Link</button>
+          <button mat-raised-button (click)="submitLink()" color="primary">Submit Links</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div> -->
+  <div>
+    <button class="btn btn-success" (click)="print()" *ngIf="show" style="margin-left: 1400px">Print</button>
+    <div id="myholder" style="margin-left: 250px ;background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    "></div>
+  </div>
+</body>
+
+</html>

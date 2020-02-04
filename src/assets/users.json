@@ -1,0 +1,88 @@
+{
+    "components": [
+        {
+            "name": "component1",
+            "shape": "Circle",
+            "color": "red",
+            "text": "Start",
+            "textColor": "white",
+            "x_pos": 300,
+            "y_pos": 30
+        },
+        {
+            "name": "component2",
+            "shape": "Rectangle",
+            "color": "green",
+            "text": "Process",
+            "textColor": "white",
+            "x_pos": 300,
+            "y_pos": 130
+        },
+        {
+            "name": "component3",
+            "shape": "Rectangle",
+            "color": "yellow",
+            "text": "Left",
+            "textColor": "white",
+            "x_pos": 10,
+            "y_pos": 130
+        },
+        {
+            "name": "component4",
+            "shape": "Rectangle",
+            "color": "blue",
+            "text": "Right",
+            "textColor": "white",
+            "x_pos": 600,
+            "y_pos": 130
+        },
+        {
+            "name": "component5",
+            "shape": "Ellipse",
+            "color": "violet",
+            "text": "Stop",
+            "textColor": "white",
+            "x_pos": 300,
+            "y_pos": 230
+        },
+        {
+            "name": "component6",
+            "shape": "Ellipse",
+            "color": "violet",
+            "text": "Start",
+            "textColor": "white",
+            "x_pos": 800,
+            "y_pos": 130
+        }
+    ],
+    "links": [
+        {
+            "source": "component4",
+            "target": "component6"
+        },
+        {
+            "source": "component1",
+            "target": "component2"
+        },
+        {
+            "source": "component2",
+            "target": "component1"
+        },
+        {
+            "source": "component2",
+            "target": "component3"
+        },
+        {
+            "source": "component2",
+            "target": "component4"
+        },
+        {
+            "source": "component4",
+            "target": "component5"
+        },
+        {
+            "source": "component5",
+            "target": "component4"
+        }
+    ]
+}
